@@ -13,4 +13,8 @@ import Community from "../components/landingPage/community/community.astro";
   <Features />
   <Tweets />
   <Community />
+  <script>
+    import flamethrower from "flamethrower-router";
+    export const router = flamethrower({ prefetch: "visible" });
+  </script>
 </LandingPage>

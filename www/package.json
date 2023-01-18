@@ -29,6 +29,7 @@
     "clsx": "^1.2.1",
     "embla-carousel": "^7.0.3",
     "embla-carousel-autoplay": "^7.0.3",
+    "flamethrower-router": "0.0.0-meme.12",
     "sharp": "^0.31.1",
     "tailwind-scrollbar": "^2.0.1",
     "treeify": "^1.1.0"
