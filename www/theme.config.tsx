@@ -70,6 +70,7 @@ const config: DocsThemeConfig = {
         <meta property="og:title" content={frontMatter.title} />
         <meta property="og:image" content={ogLink} />
         <meta property="twitter:image" content={ogLink} />
+        <meta name="twitter:card" content="summary_large_image" />
       </>
     );
   },
