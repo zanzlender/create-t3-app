@@ -1,0 +1,68 @@
+---
+title: T3 Collection
+description: Cool open source projects and companies using the T3 stack
+---
+
+import {
+  projects,
+  companies,
+  OpenSourceAppList,
+  CompanyList,
+} from "~/components/t3-collection";
+
+# T3 Collection
+
+Made a project using the T3 stack and want to share it? Add it to the list!
+
+## Open Source apps made using the T3 Stack
+
+{<table>
+
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Repo</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {projects.map((project) => (
+      <tr key={project.link}>
+        <td>{project.description}</td>
+        <td>
+          <a href={project.repo}>{project.repoName}</a>
+        </td>
+        <td>
+          <a href={project.link}>{project.linkName}</a>
+          {project.linkExtra && <span> {project.linkExtra}</span>}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>}
+
+## Companies using the T3 Stack
+
+We'd love to know of companies that use the T3 stack for their apps. Is your company using the T3 stack and would like to share it? Add it to the list!
+
+{<table>
+
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {companies.map((company) => (
+      <tr key={company.link}>
+        <td>{company.name}</td>
+        <td>
+          <a href={company.link}>{company.linkName}</a>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>}
+
+_Have a cool project using the T3 stack? Make a [pull request](https://github.com/t3-oss/create-t3-app/tree/next/www/src/components/docs/openSourceAppList.tsx) and add it here!_

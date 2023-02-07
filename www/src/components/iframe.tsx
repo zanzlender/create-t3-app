@@ -7,7 +7,7 @@ export function Iframe(props: { src: string; title: string }) {
         src={props.src}
         title={props.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+        allowFullScreen={true}
       />
     </div>
   );

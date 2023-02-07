@@ -1,3 +1,5 @@
+import nextra from "nextra";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -12,14 +14,19 @@ const nextConfig = {
         hostname: "avatars.githubusercontent.com",
         pathname: "/u/*",
       },
+      {
+        protocol: "https",
+        hostname: "github.com",
+        pathname: "/*",
+      },
     ],
   },
 };
 
-const withNextra = require("nextra")({
+const withNextra = nextra({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.tsx",
   defaultShowCopyCode: true,
 });
 
-module.exports = withNextra(nextConfig);
+export default withNextra(nextConfig);

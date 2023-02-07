@@ -10,7 +10,7 @@ export function Quote(props: {
   };
 }) {
   return (
-    <blockquote className="bg-purple-200 dark:text-purple-50 dark:bg-purple-300/20 quote relative my-3 w-full rounded-md border-l-4 border-neutral-500 p-2 text-sm italic text-zinc-900">
+    <blockquote className="quote relative my-3 w-full rounded-md border-l-4 border-neutral-500 bg-purple-200 p-2 text-sm italic text-zinc-900 dark:bg-purple-300/20 dark:text-purple-50">
       <div className="relative flex w-fit items-center justify-center p-1">
         <p className="mb-4 text-lg">
           <span aria-hidden="true">&quot;</span>

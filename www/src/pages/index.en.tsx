@@ -27,7 +27,7 @@ export default function Home() {
                         {" "}
                         full-stack,
                       </span>
-                      <span className="text-[hsl(240,100%,70%)] whitespace-nowrap">
+                      <span className="whitespace-nowrap text-[hsl(240,100%,70%)]">
                         typesafe
                       </span>
                       <span className="text-[hsl(280,100%,60%)]">Next.js</span>{" "}
