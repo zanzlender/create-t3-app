@@ -39,6 +39,7 @@ const Logo = () => (
 
 const config: DocsThemeConfig = {
   logo: <Logo />,
+  primaryHue: 280,
   i18n: [
     { locale: "en", text: "English" },
     { locale: "ar", text: "العربية", direction: "rtl" },
@@ -66,10 +67,11 @@ const config: DocsThemeConfig = {
       });
     return (
       <>
-        <meta name="description" content={frontMatter.description} />
-        <meta property="og:title" content={frontMatter.title} />
         <meta property="og:image" content={ogLink} />
-        <meta property="twitter:image" content={ogLink} />
+        <meta property="og:image:alt" content={ogLink} />
+
+        <meta name="twitter:image" content={ogLink} />
+        <meta name="twitter:image:alt" content={ogLink} />
         <meta name="twitter:card" content="summary_large_image" />
       </>
     );
@@ -81,6 +83,9 @@ const config: DocsThemeConfig = {
     link: "https://t3.gg/discord",
   },
   docsRepositoryBase: "https://github.com/t3-oss/create-t3-app/tree/main/www",
+  sidebar: {
+    toggleButton: true,
+  },
   footer: {
     text: (
       <div className="flex w-screen items-center justify-center">
