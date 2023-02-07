@@ -57,7 +57,7 @@ const config: DocsThemeConfig = {
     const { pathname } = useRouter();
     console.log("meta", frontMatter);
     const ogLink =
-      "/api/og-blog?" +
+      "/api/og?" +
       docsParams.toSearchString({
         title: frontMatter.title,
         description: frontMatter.description,
