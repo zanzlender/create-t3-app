@@ -36,7 +36,7 @@ export default function Home() {
 
                     <div className="mt-4 flex w-full items-center justify-center gap-4 xl:mt-8">
                       <Button
-                        href="/en/introduction"
+                        href="/en/create-t3-app/introduction"
                         openInNewTab={false}
                         rounded="md"
                         className="group"
