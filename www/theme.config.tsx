@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import type { DocsThemeConfig } from "nextra-theme-docs/.";
 
 const config: DocsThemeConfig = {
@@ -6,6 +7,15 @@ const config: DocsThemeConfig = {
     { locale: "en", text: "English" },
     { locale: "ar", text: "العربية", direction: "rtl" },
   ],
+  useNextSeoProps() {
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s - Create T3 App",
+      };
+    }
+    return {};
+  },
   project: {
     link: "https://github.com/t3-oss/create-t3-app",
   },
