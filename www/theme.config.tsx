@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-import type { DocsThemeConfig } from "nextra-theme-docs/.";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import { docsParams } from "~/utils/zod-params";
 
 const Logo = () => (
   <svg
@@ -50,6 +51,27 @@ const config: DocsThemeConfig = {
       };
     }
     return {};
+  },
+  head: () => {
+    const { frontMatter } = useConfig();
+    const { pathname } = useRouter();
+    console.log("meta", frontMatter);
+    const ogLink =
+      "/api/og-blog?" +
+      docsParams.toSearchString({
+        title: frontMatter.title,
+        description: frontMatter.description,
+        readingTime: 4,
+        slug: pathname,
+      });
+    return (
+      <>
+        <meta name="description" content={frontMatter.description} />
+        <meta property="og:title" content={frontMatter.title} />
+        <meta property="og:image" content={ogLink} />
+        <meta property="twitter:image" content={ogLink} />
+      </>
+    );
   },
   project: {
     link: "https://github.com/t3-oss/create-t3-app",
