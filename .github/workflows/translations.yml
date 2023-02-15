@@ -37,6 +37,7 @@ jobs:
 
             const CODEOWNERS = {
               ar: ["a4addel", "Sboonny"],
+              es: ["amariani","andrescv", "hodeinavarro", "Nsttt", "ramirofarias"],
               fr: ["Defranos", "joachimjusth"],
               no: ["estubmo", "josephayman"],
               pl: ["matibox", "Infiplaya", "PiotrekPKP"],
