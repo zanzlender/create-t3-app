@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "checkJs": true
+  },
+  "include": ["cli.ts", "tsup.config.ts", "../reset.d.ts"]
+}

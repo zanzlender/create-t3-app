@@ -15,6 +15,8 @@ const config = {
     project: [
       "./tsconfig.json",
       "./cli/tsconfig.eslint.json", // separate eslint config for the CLI since we want to lint and typecheck differently due to template files
+      "./t3-codemod/tsconfig.json",
+      "./t3-codemod/tsconfig.cli.json",
       "./www/tsconfig.json",
     ],
   },
