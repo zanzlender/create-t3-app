@@ -172,3 +172,28 @@ _**NOTE:** An empty string is still a string, so `z.string()` will accept an emp
 ```
 TWITTER_API_TOKEN=
 ```
+  
+### Multiple .env files with NextJS
+  
+As we said in [.env.example](#envexample) it's not recommended to commit your environment variables, however, you can still have multiple `.env.{environment}` files, as explained in the [NextJS docs](https://nextjs.org/docs/basic-features/environment-variables). The `.env` file will load first, after which other `.env.{enviroment}` files will load based on your current enviroment, and override the same `.env` variables.
+
+Keep in mind that you still need to have the original `.env` file so that you don't get thrown errors.
+  
+#### Example 
+
+If you have in your .env file
+ 
+```js
+HOST="localhost:3000"
+```
+  
+and in your .env.production file
+ 
+```js
+HOST="https://create.t3.gg"
+```
+  
+when running `npm start` the value of HOST will be `https://create.t3.gg`.
+  
+  
+
